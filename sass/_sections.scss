@@ -1,0 +1,242 @@
+@import 'core';
+
+body {
+    background-color: #F5F5F5;
+}
+
+.main {
+    @include size(1440px,1600px);
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    @include font(14px, 21px, 400);
+}
+
+.footer {
+    @include size(1440px,1700px);
+    background-color: #F5F5F5;
+    margin: 0 auto;
+}
+
+._products-content {
+    @include size(520px, max-content);
+
+    &>.top_block_title {
+        @include size(107px, 29px);
+        @include font(14px, 30px, 400);
+        background-color: rgba(231, 232, 227, 1);
+        text-align: center;
+        border-radius: 32px;
+        cursor: pointer;
+    }
+
+    &>.top_block_text {
+        @include padding(20px);
+        @include font(48px, 57px, 700);
+    }
+
+    &>.top_block_p {
+        @include font(18px,27px, 400);
+        @include padding(28px);
+
+        color: rgba(101, 102, 92, 1);
+    }
+
+    &>._buttons-list {
+        @include padding(21px);
+        @include flex(start);
+
+        &>._btn-item > ._btn {
+            @include size(192px,50px);
+            @include margin(0,0,0,10px);
+            @include font(16px,24px,400);        
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+            border: 1px solid #E7E8E3;
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.5s all ease;
+
+            &:hover {
+                background-color: #E7E8E3;
+            }
+        }
+
+        &>._btn-item > ._btn-arrow {
+            background-color: #fff;
+            box-shadow: none;
+            border: none;
+            @include bg-img(url('../images/arrow.svg'), 90%);
+        }
+    }
+
+}
+
+._image-list {
+    @include flex(space-around);
+    @include size(600px,200px);
+    @include margin(37px);    
+
+    &>._image-list_block {
+        @include size(300px,200px);
+
+        &>._image-list_title {
+            @include font(20px,38px,700);
+        }
+        &>._image-list_par {
+            @include font(16px,24px,400);
+            color: rgba(101, 102, 92, 1);
+            @include padding(18px);
+        }
+    }
+}
+
+.footer-image {
+    margin-left: calc(100% - 135px);
+}
+
+._footer-button {
+    display: block;
+    @include margin(100px,auto,0,auto);
+    @include size(92px,29px);
+    @include font(14px,21px,400);
+    background-color: rgba(231, 232, 227, 1);
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+}
+
+._footer-title {
+    @include font(48px,57px,700);
+    @include size(643px,48px);
+    @include margin(25px,auto,0,auto);
+}
+
+._footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3,405px);
+    grid-template-rows: repeat(2,460px);
+    gap: 32px;
+    @include margin(82px,80px,0,80px);
+
+    &>._grid-item {
+        border-radius: 0 0 12px 12px;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    &>._grid-item1 {
+            @include bg-img(url('../images/room1.png'),start);
+    }
+
+    &>._grid-item2 {
+        @include bg-img(url('../images/room2.png'),start);
+    }
+    
+    &>._grid-item3 {
+        @include bg-img(url('../images/room3.png'),start);
+    }
+
+    &>._grid-item4 {
+        @include bg-img(url('../images/room4.png'),start);
+    }
+
+    &>._grid-item5 {
+        @include bg-img(url('../images/room5.png'),start);
+    }
+
+    &>._grid-item6 {
+        @include bg-img(url('../images/room6.png'),start);
+    }
+    
+}
+
+._grid-item-title {
+    @include font(24px,33px,700);
+}
+
+._grid-item-price {
+    @include font(18px,27px,700);
+    @include margin(5px);
+    @include size(max-content,max-content);
+    transition: 0.5s all ease;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(101, 102, 92, 1);
+    }
+}
+
+._grid-item-text {
+    display: block;
+    @include font(16px,24px,400);
+    color: rgba(101, 102, 92, 1);
+    @include bg-img(url('../images/geo.svg'), left);
+    @include padding(0,20px);
+    @include margin(16px);
+}
+
+._grid-item-list {
+    @include size(300px,24px);
+    @include flex(start);
+    gap: 26px;
+    @include font(16px,24px,400);
+    color: rgba(101, 102, 92, 1);
+    @include margin(16px);
+
+    &>._grid-item-list-element1 {
+        @include bg-img(url('../images/bathroom.svg'),left);
+        @include padding(0,20px);
+    }
+
+    &>._grid-item-list-element2 {
+        @include bg-img(url('../images/bed.svg'),left);
+        @include padding(0,20px);
+    }
+
+    &>._grid-item-list-element3 {
+        @include bg-img(url('../images/square_foot.svg'),left);
+        @include padding(0,20px);
+    }
+}
+
+._grid-item-elements {
+    @include margin(280px,24px);
+}
+
+._buttons-list_end {
+    @include flex(space-between);
+    @include margin(80px,auto,0,auto);
+    @include size(350px,50px);
+}
+
+._buttons-list_end {
+    @include flex(space-between);
+    @include margin(80px, auto, 0, auto);
+    @include size(350px, 50px);
+
+    &>._btn-item>._btn {
+        @include size(192px, 50px);
+        @include margin(0, 0, 0, 10px);
+        @include font(16px, 24px, 400);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+        border: 1px solid #E7E8E3;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.5s all ease;
+
+        &:hover {
+            background-color: #E7E8E3;
+        }
+    }
+
+    &>._btn-item>._btn-arrow {
+        background-color: rgba(245, 245, 242, 1);
+        box-shadow: none;
+        border: none;
+        @include bg-img(url('../images/arrow.svg'), 90%);
+    }
+}
+
+.corner2 {
+    @include margin(25px);
+}

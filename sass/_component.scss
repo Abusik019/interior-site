@@ -1,0 +1,20 @@
+@import 'core';
+
+._products-list {
+    @include margin(50px);
+}
+
+._products-item {
+    @include size(1250px,600px);
+    @include margin(15px, 80px, 0, 80px);
+    @include flex(space-between);
+}
+
+._section-title {
+    @include font(48px,57px,700);
+    text-align: center;
+}
+
+._products-item__reverse {
+    @include margin(128px,80px);
+}
